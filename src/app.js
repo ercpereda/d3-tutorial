@@ -1,0 +1,1 @@
+document.body.innerHTML = `<h1>Welcome to D3 v${d3.version}</h1>`;

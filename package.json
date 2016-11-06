@@ -1,0 +1,12 @@
+{
+  "name": "d3-tutorial",
+  "version": "1.0.0",
+  "description": "D3 v4 tutorial from egghead",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start -s -f index.html src --no-ui --no-notify --port $PORT --host $IP" 
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5"
+  }
+}
