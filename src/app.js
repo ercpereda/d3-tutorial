@@ -46,4 +46,22 @@ var ordinalScale = d3.scaleOrdinal()
     
 console.log(ordinalScale('poor'));
 console.log(ordinalScale('good'));
-console.log(ordinalScale('great'));
+console.log(ordinalScale('gret'));
+
+console.log('=========================');
+console.log('= load and inspect data =');
+console.log('=========================');
+d3.csv('data/data.csv', (data) => { console.log(data) });
+d3.tsv('data/data.tsv', (data) => { console.log(data) });
+d3.json('data/data.json', data => {
+    let extent = d3.extent(data, d => d.age);
+    console.log(extent);
+    
+    let scale = d3.scaleLinear()
+        .domain(extent)
+        .range([0, 600]);
+    console.log(scale(34));
+    
+    let ages = d3.set(data, d => d.age);
+    console.log(ages.values());
+});
